@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class=" text-center mt-4 shadow-lg rounded-4 w-75 m-auto bg-opacity-50">
+      <div class="w-75 m-auto pb-2">
+
+        <h1 class="pt-3">CRUD System</h1>
+        <input type="text" class="form-control mt-3" placeholder="Enter product name" id="productNAME" onkeyup="check(this.value)" >
+        <div class="alert alert-danger mt-2" id="alert">Invalid Product name.</div>
+        <input type="number" class="form-control mt-3" placeholder="Enter product price" onkeyup=" check2(this.value)"
+          id="productPRICE">
+        <div class="alert alert-danger mt-2" id="alert2">Invalid Product Price.</div>
+        <input type="text" class="form-control mt-3" placeholder="Enter product Catergory" onkeyup="check3(this.value)" id="productCAT">
+        <div class="alert alert-danger mt-2" id="alert3">Invalid Product Category.</div>
+        <textarea name="" cols="30" rows="10" class=" form-control  mt-3" id="productDESC"
+          placeholder="Enter product Description"></textarea>
+        <button class="btn btn-primary w-25 my-3" onclick=" mainFunction() " id="Addbtn">Add Product</button>
+        <button class="btn btn-Warning w-25 my-3" onclick="updateItemsB() " id="Updatebtn">Update Product</button>
+        <input type="text" class="form-control" placeholder="Search ..." onkeyup="searchitem(this.value)">
+      </div>
+    </div>
+    <div class="w-75 m-auto">
+      <table class="table mt-3 text-center">
+        <thead>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Catergory</th>
+          <th>Description</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </thead>
+        <tbody id="demo">
+
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/JAVA.js"></script>
+</body>
+
+
+</html>
